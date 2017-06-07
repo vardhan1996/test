@@ -1,0 +1,18 @@
+<h1>Product Type Details</h1>
+
+<p>
+  <strong>Type ID:</strong>
+  <%= @type.id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @type.name %>
+</p>
+
+<%= link_to 'Edit', edit_type_path(@type) %>
+<%= link_to 'Destroy', type_path(@type),
+      method: :delete,
+      data: { confirm: 'All the associated PRODUCTS to this type also gets deleted.
+        Are you sure?' } %>
+<%= link_to 'Back', types_path %>

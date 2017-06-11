@@ -2,7 +2,7 @@
 
 <p>
   <strong>Product ID:</strong>
-  <%= @product.id %>
+  <%= @product.shop_product_id %>
 </p>
 
 <p>
@@ -16,12 +16,12 @@
 </p>
 
 <p>
-  <strong>Quantity:</strong>
+  <strong>Inventory Quantity:</strong>
   <%= @product.quantity %>
 </p>
 
 <p>
-  <strong>Price:</strong>
+  <strong>Price(per unit)</strong>
   <%= @product.price %>
 </p>
 <%= link_to 'Edit', edit_product_path(@product) %>

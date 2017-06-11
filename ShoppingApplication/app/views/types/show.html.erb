@@ -10,9 +10,13 @@
   <%= @type.name %>
 </p>
 
+<strong>Actions</strong>
 <%= link_to 'Edit', edit_type_path(@type) %>
 <%= link_to 'Destroy', type_path(@type),
       method: :delete,
       data: { confirm: 'All the associated PRODUCTS to this type also gets deleted.
         Are you sure?' } %>
-<%= link_to 'Back', types_path %>
+<%= link_to 'Back', types_path %> </br></br>
+
+<%= link_to 'Create New Type', new_type_path %></br>
+<%= link_to 'Create New Product', new_product_path %>

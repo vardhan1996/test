@@ -1,0 +1,33 @@
+<h1>Product Details</h1>
+
+<p>
+  <strong>Product ID:</strong>
+  <%= @product.id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @product.title %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <% @product.variants.each do |variant| %>
+    <%= variant.price %>
+  <% end %>
+</p>
+
+<p>
+  <strong>Product Type:</strong>
+  <%= @product.product_type %>
+</p>
+
+<p>
+  <strong>Vendor:</strong>
+  <%= @product.vendor %>
+</p>
+
+<%= link_to 'Back', products_path %></br>
+
+<%= link_to 'Create New Type', new_type_path %></br>
+<%= link_to 'Create New Product', new_product_path %>
